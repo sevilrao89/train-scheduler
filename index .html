@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<title>
+	Sevil 	
+	</title>
+
+	</head>
+
+	<body>
+		<header>
+			<div class="jumbotron">
+			  <h1 class="display-4">Train Schedule Choo Choo!</h1>
+			  
+			</div>
+		
+		</header>
+
+	<main>
+		<div id = "current">Current Train Schedule</div>
+		<div class="container">
+		<div class="border">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Train Name</th>
+						<th>Destination</th>
+						<th>Frequency(min)</th>
+						<th>Next Arrival</th>
+						<th>Minutes Away</th>
+					</tr>
+				</thead>
+			</table>
+
+		</div>
+		<div id="add">Add Train</div>
+		<div class="border">
+		  <form id ="trainSchedule">
+		    <div class="form-group row">
+		      <label for="trainName" class="col-sm-2 col-form-label">Train Name</label>
+		      <div class="col-sm-10">
+		        <input type="text" class="form-control" id="trainName">
+		      </div>
+		    </div>
+		<div class="form-group row">
+	      <label for="destinationName" class="col-sm-2 col-form-label">Destination</label>
+	      <div class="col-sm-10">
+	        <input type="text" class="form-control" id="destinationName">
+		  </div>
+		 </div>
+		<div class="form-group row">
+	      <label for="firstTraintime" class="col-sm-2 col-form-label">First Train Time(HH:mm-military time)</label>
+	      <div class="col-sm-10">
+	        <input type="text" class="form-control" id="firstTraintime">
+	      </div>
+	     </div> 
+		<div class="form-group row">
+	      <label for="frequencyTime" class="col-sm-2 col-form-label">Frequency (min)</label>
+	      <div class="col-sm-10">
+	        <input type="text" class="form-control" id="frequencyTime">
+	      </div>
+		</div>
+		    
+		<div class="form-group row">
+	      <div class="offset-sm-2 col-sm-10">
+	        <button type="submit" class="btn btn-primary">Submit</button>
+	      </div>
+	    </div>
+	  	</form>
+		</div>
+		</div>
+
+	
+	</main>
+
+	<footer>
+	
+	</footer>
+
+	<script src="assets/js/moment.min.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	
+
+	
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+
+html{
+	box-sizing:border-box;
+	margin: 0;
+	padding: 0;
+
+}
+
+ *, *:before,*:after { box-sizing: inherit; margin: 0; padding: 0; 
+}
+
+header,footer,h1,h2,h3,h4,div,p,aside,section,main,ol,ul,li{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 100%;
+	border: 0;
+
+
+}
+
+header h1{
+	text-align: center;
+	color: #3a9;
+
+}
+
+
+
+#current{
+	margin-left: 5.8em;
+	font-size: 18px;
+	font-weight: bold;
+	color: #3a9;
+}
+
+.border{
+	border: solid 2px #111;
+	margin-top: 20px;
+}
+
+#add{
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 1em;
+	color:#3a9;
+
+}
