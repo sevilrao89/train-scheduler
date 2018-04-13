@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
-var config = {
+
+
+    var config = {
       apiKey: "AIzaSyBZQJ8Llz_Ylrc1k_FrjetARkbzGtHh_4A",
       authDomain: "train-scheduler-a3d41.firebaseapp.com",
       databaseURL: "https://train-scheduler-a3d41.firebaseio.com/",
@@ -49,19 +51,24 @@ var config = {
 
 
     var dateYear = Number(dateString.split('-')[0]);
-    var dateMonth = Number(dateString.split('-')[1]);
+    var dateMonth = Number(dateString.split('-')[1]) - 1;
     var dateDay = Number(dateString.split('-')[2]);
     var m = moment(new Date(dateYear,dateMonth,dateDay,hours,minutes,0));
 
     for (var i = 0; i < 10000; i++){
-      m = m.add(frequency, 'minutes')
+      minutes = minutes + frequency
+      m = moment(new Date(dateYear,dateMonth,dateDay,hours,minutes,0));
 
-      if(moment().isBetween(m.subtract(frequency, 'm'), m)){
-      var timeInMins = Number(moment().format('m'));
+      var newMins = Number(m.subtract(frequency, 'm').format('m'))
+      var prevStopMoment = moment(new Date(dateYear,dateMonth,dateDay,hours,newMins,0));
+      var newMoment = moment();
+      if(newMoment.isBetween(prevStopMoment.format('YYYY-MM-DD HH:mm'), m.format('YYYY-MM-DD HH:mm')))
+      {
+      var timeInMins = Number(newMoment.format('m'));
       var timeAway = m.subtract(timeInMins, 'm').format('m');
       var nextArrival = m.format('hh:mm')
       console.log(timeAway, nextArrival)
-
+        break;
       }
     }
     }
